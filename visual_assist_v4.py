@@ -227,7 +227,7 @@ def main():
                 feedback_parts.append(hazard_warning)
 
                 # 2. Text Transcription (If relevant)
-                if extracted_text and (extracted_text.lower() != "n/a" or extracted_text.lower() != "none"):
+                if extracted_text and (extracted_text.lower() != "n/a" or extracted_text.lower() != "none" or "none" not in extracted_text.lower()):
                     feedback_parts.append(f"A sign says: {extracted_text}.")
 
                 # 3. Scene Description
